@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    >
+
+    <android.support.v7.widget.CardView
+
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        fresco:cardCornerRadius="4dp"
+        fresco:contentPaddingBottom="4dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            >
+
+            <CheckBox
+                android:id="@+id/goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_toRightOf="@+id/goods"
+                android:src="@mipmap/ic_launcher_round"
+                />
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/goodsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="商品名称"
+                    android:maxEms="20"
+                    android:paddingLeft="5dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/goodsPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/goodsTitle"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:hint="商品价格" />
+
+            <com.example.Liuhang0120.ui.wight.Caclator
+                android:id="@+id/cv_caculatorView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                >
+
+            </com.example.Liuhang0120.ui.wight.Caclator>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
